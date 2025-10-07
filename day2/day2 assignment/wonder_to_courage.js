@@ -1,147 +1,48 @@
-let
+let angle=0;
 function setup() {
   createCanvas(500, 600);
-  x=0;
-}
+  
+  }
 
 function draw() {
- 
   background("#F289A8");
-  
   noStroke();
   fill("black");
   rect(5,5,490,590);
-  //1
-  fill("#F289A8");
-  ellipse(170,40,80,80);
-  //2
-  ellipse(120,85,50,50);
-  //3
-  ellipse(260,130,180,180);
-  //4
-  ellipse(350,260,150,150);
-  //5
-  ellipse(440,200,110,110);
-  //6
-  ellipse(210,390,250,250);
-  //7
-  ellipse(320,550,190,190);
-  //8
-  ellipse(190,220,50,50);
-  //9
-  ellipse(160,240,30,30);
-  //10
-  ellipse(130,210,60,60);
-  //11
-  ellipse(40,180,140,140);
-  //12
-  ellipse(90,570,90,90);
-  //13
-  ellipse(470,400,110,110);
-  //14
-  ellipse(80,450,90,90);
-  //15
-  ellipse(30,420,45,45);
+  radialGradient(
+  width/2,height/2,0,
+  width/2,height/2,500,
+  color("#df5780ff"),
+  color("#e4b551ff"),
+  );
+  push();
+  translate(width/2, height/2);
+  angle += radians(2);
+  rotate(angle);
   
-  
-   fill("#CB91E2");
-  ellipse(170,40,70,70);
-  //2
-  ellipse(120,85,40,40);
-  //3
-  ellipse(260,130,170,170);
-  //4
-  ellipse(350,260,140,140);
-  //5
-  ellipse(440,200,100,100);
-  //6
-  ellipse(210,390,240,240);
-  //7
-  ellipse(320,550,180,180);
-  //8
-  ellipse(190,220,40,40);
-  //9
-  ellipse(160,240,25,25);
-  //10
-  ellipse(130,210,50,50);
-  //11
-  ellipse(40,180,130,130);
-  //12
-  ellipse(90,570,80,80);
-  //13
-  ellipse(470,400,100,100);
-  //14
-  ellipse(80,450,80,80);
-  //15
-  ellipse(30,420,35,35);
-  
-    fill("#F69E47");
-  ellipse(170,40,65,65);
-  //2
-  ellipse(120,85,40,40);
-  //3
-  
-  //4
-  ellipse(350,260,130,130);
-  //5
-  ellipse(440,200,90,90);
-  //6
- 
-  //7
-  ellipse(320,550,180,180);
-  //8
-  ellipse(190,220,40,40);
-  //9
- 
- 
-  //11
-  ellipse(40,180,130,130);
-  //12
-  ellipse(90,570,80,80);
-  //13
-  
-  //14
- 
-  //15
-  ellipse(30,420,35,35);
+  rectMode(CENTER);
+  ellipse(30, 30, sin(frameCount/100)*200);
+  pop();
+  for (let a=0; a<radians(360); a+=radians(30)) {
+    push();3
+    translate(width/2, height/2);   
+    rotate(a);                      
+    translate(0, 200);              
+    rotate(-angle);                 
+    rectMode(CENTER);
+    fill("#fcea76ff");
+    ellipse(20, 20, 20);
+    pop();
 
   
+  }
   
-  fill("#FEE332");
-  
-   ellipse(170,40,frameCount%50);
-  //2
- 
-  //3
-  
-  //4
-  
-  //5
-  ellipse(440,200,frameCount%80);
-  //6
- 
-  //7
-  
-  //8
-  ellipse(190,220,frameCount%30);
-  //9
- 
- 
-  //11
-  
-  //12
-  ellipse(90,570,frameCount%80);
-  //13
-  
-  //14
- 
-  //15
-  ellipse(30,420,frameCount%20);
-  ellipse(40,180,frameCount%500);
-  
-  
-  
-  
+}
 
+function radialGradient(sX,sY,sR,eX,eY,eR,colorS,colorE){
+  let gradient = drawingContext.createRadialGradient(sX,sY,sR,eX,eY,eR);
+  gradient.addColorStop(0, colorS);
+  gradient.addColorStop(1, colorE);
 
+  drawingContext.fillStyle = gradient;
 }
