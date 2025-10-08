@@ -21,7 +21,7 @@ function draw() {
   rotate(angle);
   
   rectMode(CENTER);
-  ellipse(30, 30, sin(frameCount/100)*200);
+  ellipse(30, 30, tan(frameCount/100)*200);
   pop();
   for (let a=0; a<radians(360); a+=radians(30)) {
     push();3
