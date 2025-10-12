@@ -29,7 +29,7 @@ function draw() {
 }
 
 function sendUserData(userId, score) {
-  fetch('https://yourserver.com/save', {
+  fetch('https://suneha002.github.io/playful-media-suneha/day5/day%205%20assignment', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, score })
