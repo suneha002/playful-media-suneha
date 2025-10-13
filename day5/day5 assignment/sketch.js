@@ -21,11 +21,11 @@ let chosenObject = null;
 let objectClicked = [false, false, false];
 
 let dialogue = [
-  ["....", "I'm at the beach", "the wind is smoothing" , "will i finally be free?", "?", "is that something sparkling over there?"],
+  ["....", "I'm at the beach", "the wind is smoothing" , "now i can-", "?", "is that something sparkling over there?"],
   ["[you obtained: A Magic Wand]", "? what could this possibly be? a toy?", "i see something else already"],
   ["[you obtained: Starry Headband]", "??" ,"More weird things keep showing up"],
   ["?!?!?!?", "what the hell is that?!", "thing: 'im a fairy'", "it's talking?!", "fairy(?): have you seen my wand and headband?", "you mean these?",
-   "fairy(surely):yes!", "fairy(surely): you're a kind person", "fairy(surely): i can fulfill one wish for you", "really?", "fairy:really!", "fairy: so whats your wish? choose wisely", "fairy:excellent", "fairy:is that what you really want?", "fairy:do you really think this will make you free?"]
+   "fairy(surely):yes!", "fairy(surely): you're a kind person", "fairy(surely): i can fulfill one wish for you", "really?", "fairy:really!", "fairy: so whats your wish? choose wisely", "fairy:excellent"]
 ];
 
 let objectImages = [];
