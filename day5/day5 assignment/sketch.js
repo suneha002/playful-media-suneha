@@ -25,7 +25,7 @@ let dialogue = [
   ["[you obtained: A Magic Wand]", "? what could this possibly be? a toy?", "i see something else already"],
   ["[you obtained: Starry Headband]", "??" ,"More weird things keep showing up"],
   ["?!?!?!?", "what the hell is that?!", "thing: 'im a fairy'", "it's talking?!", "fairy(?): have you seen my wand and headband?", "you mean these?",
-   "fairy(surely):yes!", "fairy(surely): you're a kind person", "fairy(surely): i can fulfill one wish for you", "really?", "fairy:really!", "fairy: so whats your wish? choose wisely", "fairy:excellent"]
+   "fairy(surely): you're a kind person", "fairy(surely): i can fulfill one wish for you", "really?", "fairy(surely):really!", "fairy(surely): so whats your wish? choose wisely", "fairy(surely):excellent"]
 ];
 
 let objectImages = [];
@@ -176,11 +176,11 @@ function drawDialogueBox(textContent) {
 function drawYesButton() {
   fill(255);
   stroke(0);
-  rect(width / 2 - 50, height / 2 + 100, 100, 40, 140);
+  rect(width / 2 - 50, height / 2 + 100, 100, 40, 10);
   fill(0);
   noStroke();
   textAlign(CENTER, CENTER);
-  text("give them?", width / 2, height / 2 + 120);
+  text("Yes", width / 2, height / 2 + 120);
 }
 
 function drawWishOptions() {
