@@ -1,30 +1,49 @@
-class Flower{
-    constructor(x,y,size,speed){
-        this.x=x;
-        this.y=y;
-        this.size=size;
-        this.speed=speed;
+class Flower {
+    constructor(x, y, size, xSpeed, ySpeed) {
+        this.x = x;
+        this.y = y;
+        this.size = 50;
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
+        this.hovered=false;
     }
 
 
+    drawFlower() {
 
-    show(){
-        ellipse(this.x,this.y,this.size);
-        ellipse(this.x,this.y-20,this.size*2);
-        ellipse(this.x,this.y+20,this.size*2);
-        ellipse(this.x-20,this.y,this.size*2);
-        ellipse(this.x+20,this.y,this.size*2);
-    }
-
-    move(){
-        this.x=this.x+ this.speed;
-        if(this.x>width){
-            this.x=0;
+        if(this.hovered==true){
+            fill("red");
         }
+        else{
+            fill("white");
+        }
+        // ellipse(this.x, this.y, this.size, this.size + 30);
+        // ellipse(this.x, this.y, this.size + 30, this.size);
+        ellipse(this.x, this.y, this.size);
     }
-    grow(){
-        if(this.size<200){
-        this.size=this.size+1;
+
+
+    move() {
+        this.x = this.x + this.xSpeed;
+        this.y = this.y + this.ySpeed;
+        if(this.y>height || this.y<0){
+            this.ySpeed= -this.ySpeed;
+        }
+        if(this.x>width || this.x<0){
+            this.xSpeed= -this.xSpeed;
+        }
+
     }
+
+    changeColor(mX,mY){
+
+        let distance=dist(mX, mY, this.x,this.y);
+        if(distance<this.size/2){
+            this.hovered=true;
+        }
+        // else{
+        //     this.hovered=false;
+        // }
     }
+
 }

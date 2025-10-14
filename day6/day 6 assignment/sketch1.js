@@ -1,19 +1,28 @@
-let flowers=[];
-let noFlowers=3;
+let flowers = [];
+let noPetal = 0;
+let noFlowers = 3;
 
 function setup() {
-  createCanvas(innerWidth,innerHeight);
-  for(let i=0;i<noFlowers;i+=1){
-    let tempFlower=new Flower(random(0,width), random(0,height), 50,3);
-    flowers.push(tempFlower);
-  }
+  createCanvas(innerWidth, innerHeight);
+
 }
 
 function draw() {
   background(220);
-  for (let i=0;i<flowers.length; i++){
-    flowers[i].show();
+  for (let i = 0; i < flowers.length; i++) {
+    
+    //check if mouse is one the flower
+    flowers[i].changeColor(mouseX,mouseY);
+
+    //moves and draws flowers
     flowers[i].move();
-    flowers[i].grow();
+    flowers[i].drawFlower();
+
   }
+}
+
+function mousePressed() {
+  let tempFlower = new Flower(random(width), random(height), random(10, 20), random(0, 5), random(5, 0));
+  flowers.push(tempFlower);
+
 }
