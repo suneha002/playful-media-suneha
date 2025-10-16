@@ -21,6 +21,8 @@ let currentIndex = 0;
 let interval = 30;
 
 let bgMusic;
+let tapSound;
+let fairySound;
 
 let segment = 0;
 let line = 0;
@@ -43,6 +45,8 @@ let objectData = [
   { imageIndex: 2, vnObject: null }
 ];
 
+let startScene = true;
+
 
 let endingScene = false;
 let wingUp;
@@ -55,7 +59,8 @@ let wHeight = 255;
 let showEnd = false;
 
 function preload() {
-
+  fairySound = loadSound("sound/Dreamy.mp3")
+  tapSound = loadSound("sound/Tap.mp3");
   bgMusic = loadSound("sound/bg.mp3");
   for (let f = 0; f < numImages; f++) {
     let name = "images/Assets-sea-" + f + ".jpg";
@@ -69,8 +74,8 @@ function preload() {
   realCat = loadImage("images/realCat.png");
   fairyImage = loadImage("images/fairy.png");
 
-  wingSprite = loadImage("images/wing.png"); 
-  scene2=loadImage("images/scene2.jpg");
+  wingSprite = loadImage("images/wing.png");
+  scene2 = loadImage("images/scene2.jpg");
   gameFont = loadFont("font/GomePixel.otf");
 }
 
@@ -84,6 +89,11 @@ function setup() {
 }
 
 function draw() {
+  if (startScene) {
+    drawStartScene();
+    return;
+  }
+
   if (endingScene) {
     drawEndingScene();
     return;
@@ -128,6 +138,18 @@ function draw() {
   }
 }
 
+function drawStartScene() {
+  background(0);
+  fill(255);
+  textFont(gameFont);
+  textSize(60);
+  textAlign(CENTER, CENTER);
+  text("【 Do you believe in fairies? 】", width / 2, height / 2 - 100);
+
+  textSize(30);
+  text("Click to read dialogues.....", width / 2, height / 2 + 50);
+}
+
 function drawEndingScene() {
   if (!showEnd) {
     image(scene2, 0, 0, width, height);
@@ -148,24 +170,31 @@ function drawEndingScene() {
 
     if (keyIsDown(87)) {
       wingUp -= 5;
-      if (wingUp < -60) {
+      if (wingUp < -120) {
         showEnd = true;
       }
     }
   } else {
-    // 🖤 Fade to black
+
     background(0);
 
     fill(255);
     textSize(40);
     textAlign(CENTER, CENTER);
-    text("You are free.", width / 2, height / 2);
+    text("- for you who wish to stay a child a little longer", width / 2, height / 2);
   }
 }
 function mousePressed() {
+  if (tapSound && tapSound.isLoaded()) {
+    tapSound.play();
+  }
+  if (startScene) {
+    startScene = false;
+    return;
+  }
   if (waitingForWishClick && showWishOptions && !wishChosen) {
-    let bx = width / 2;
-    let by = height / 2 + 180;
+    let bx = width / 2 - 50;
+    let by = height / 2 + 400;
     let bw = 150;
     let bh = 40;
     if (mouseX > bx && mouseX < bx + bw && mouseY > by && mouseY < by + bh) {
@@ -184,8 +213,8 @@ function mousePressed() {
   }
 
   if (waitingForYesClick && showYesButton) {
-    let bx = width / 2;
-    let by = height / 2 + 180;
+    let bx = width / 2 - 50;
+    let by = height / 2 + 400;
     let bw = 100;
     let bh = 40;
     if (mouseX > bx && mouseX < bx + bw && mouseY > by && mouseY < by + bh) {
@@ -193,6 +222,9 @@ function mousePressed() {
       showYesButton = false;
       waitingForYesClick = false;
       showFairy = true;
+      if (fairySound && fairySound.isLoaded()) {
+        setTimeout(() => fairySound.play(), 500);
+      }
       line++;
     }
     return;
@@ -231,7 +263,10 @@ function mousePressed() {
     }
 
     if (currentLineText.includes("you will be free")) {
-      endingScene = true;
+
+      setTimeout(() => {
+        endingScene = true;
+      }, 600);
     }
     if (line >= dialogue[segment].length) {
       line = 0;
@@ -263,7 +298,7 @@ function nextSegment() {
 function drawDialogueBox(textContent) {
   fill(0, 150);
   rectMode(CENTER);
-  rect(width / 2, height - 120, width - 100, 100);
+  rect(width / 2, height - 100, width - 100, 100);
 
   fill(255);
   text(textContent, width / 2, height - 100, width - 40, 80);
@@ -272,11 +307,11 @@ function drawDialogueBox(textContent) {
 function drawYesButton() {
   fill(255);
   stroke(0);
-  rect(width / 2, height / 2 + 180, 100, 40, 10);
+  rect(width / 2, height / 2 + 400, 100, 40, 10);
   fill(0);
   noStroke();
   textAlign(CENTER, CENTER);
-  text("Yes", width / 2, height / 2 + 180);
+  text("Yes", width / 2, height / 2 + 400);
 }
 
 function drawWishOptions() {
@@ -284,9 +319,9 @@ function drawWishOptions() {
   // let by = height / 2 + 100;
   fill(255);
   stroke(0);
-  rect(width / 2, height / 2 + 180, 150, 40, 10);
+  rect(width / 2, height / 2 + 400, 150, 40, 10);
   fill(0);
   noStroke();
   textAlign(CENTER, CENTER);
-  text("to be free", width / 2, height / 2 + 180);
+  text("to be free", width / 2, height / 2 + 400);
 }
