@@ -39,3 +39,14 @@
 - i had previously coded a visual novel-ish structure in unity before using class to change scenes, interactions so i tried to implement similar things in p5 js as well which was a little challenging as p5 is not exactly designed for making "games" but it was enjoyable and a nice experience regardless.
 - if i had to name inspirations for this work, im hugely inspired by vivinos and vewn's works. overall i wanted the background to look dull and the fairy to look more vibrant to create a sense of stark difference.
 - however i'd like to change and modify quite a lot places (like adding music, animation to the text) to make it look more immersive and just pleasant to look at
+
+
+
+## Day 8 assignment
+
+##### new parts to add
+- i want to add the ending scene where the player can gain wings and fly away. preferably add controls and change the game state 
+- add music (already done) add a fade-out? (to be done)
+- make the dialogue box and font look fancier
+- add animation in the text (optional)
+- add a "beep" noise everytime the player interacts with an object (optional)
