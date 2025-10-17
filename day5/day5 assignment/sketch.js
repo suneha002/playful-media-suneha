@@ -31,7 +31,7 @@ let waitingForInteraction = false;
 let gameFont;
 
 let dialogue = [
-  ["....", "I'm at the beach", "the wind is smoothing", "now i can-", "?", "is that something sparkling over there?"],
+  ["....", "I'm at the beach", "the wind is soothing", "now i can-", "?", "is that something sparkling over there?"],
   ["[you obtained: A Magic Wand]", "? what could this possibly be? a toy?", "i see something else already"],
   ["[you obtained: Starry Headband]", "??", "More weird things keep showing up"],
   ["?!?!?!?", "what the hell is that?!", "thing: 'im a fairy'", "it's talking?!", "fairy(?): have you seen my wand and headband?", "you mean these? [magical wand & starry headband]",
