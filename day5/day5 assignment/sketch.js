@@ -1,10 +1,10 @@
 let objectCreated = [false, false, false];
 let objectClicked = [false, false, false];
 
-let touchPromptCount = 0;
-let showYesButton = false;
-let waitingForYesClick = false;
-let waitingForWishClick = false;
+let touchCount = 0;
+let yesButton = false;
+let yesClicked = false;
+let wishClicked = false;
 
 let realCat = null;
 let showRealCat = false;
@@ -12,7 +12,7 @@ let showRealCat = false;
 let fairyImage = null;
 let showFairy = false;
 
-let showWishOptions = false;
+let showWish = false;
 let wishChosen = false;
 
 let bgImages = [];
@@ -26,7 +26,7 @@ let fairySound;
 
 let segment = 0;
 let line = 0;
-let waitingForInteraction = false;
+let interaction = false;
 
 let gameFont;
 
@@ -35,7 +35,7 @@ let dialogue = [
   ["[you obtained: A Magic Wand]", "? what could this possibly be? a toy?", "i see something else already"],
   ["[you obtained: Starry Headband]", "??", "More weird things keep showing up"],
   ["?!?!?!?", "what the hell is that?!", "thing: 'im a fairy'", "it's talking?!", "fairy(?): have you seen my wand and headband?", "you mean these? [magical wand & starry headband]",
-    "fairy(surely): you're a kind person", "fairy(surely): i can fulfill one wish for you", "really?", "fairy(surely):really!", "fairy: so whats your wish? choose wisely", "fairy:excellent", "fairy: now take these wings and fly far away", "fairy: you will be free."]
+    "fairy(surely): you're a kind person", "fairy(surely): i can fulfill one wish for you", "really?", "fairy(surely):really!", "fairy: so whats your wish?", "fairy:excellent", "fairy: now take these wings and fly far away", "fairy: you will be free."]
 ];
 
 let objectImages = [];
@@ -112,12 +112,12 @@ function draw() {
   }
 
   drawDialogueBox(
-    waitingForInteraction && touchPromptCount < 3
+    interaction && touchCount < 3
       ? "[touch it?]"
       : dialogue[segment][line]
   );
 
-  if (showYesButton) {
+  if (yesButton) {
     drawYesButton();
   }
 
@@ -133,7 +133,7 @@ function draw() {
     imageMode(CORNER);
   }
 
-  if (showWishOptions && !wishChosen) {
+  if (showWish && !wishChosen) {
     drawWishOptions();
   }
 }
@@ -192,7 +192,7 @@ function mousePressed() {
     startScene = false;
     return;
   }
-  if (waitingForWishClick && showWishOptions && !wishChosen) {
+  if (wishClicked && showWish && !wishChosen) {
     let bx = width / 2 - 50;
     let by = height / 2 + 400;
     let bw = 150;
@@ -200,8 +200,8 @@ function mousePressed() {
     if (mouseX > bx && mouseX < bx + bw && mouseY > by && mouseY < by + bh) {
       console.log("Wish chosen: to be free");
       wishChosen = true;
-      waitingForWishClick = false;
-      showWishOptions = false;
+      wishClicked = false;
+      showWish = false;
       line++;
 
 
@@ -212,15 +212,15 @@ function mousePressed() {
     return;
   }
 
-  if (waitingForYesClick && showYesButton) {
+  if (yesClicked && yesButton) {
     let bx = width / 2 - 50;
     let by = height / 2 + 400;
     let bw = 100;
     let bh = 40;
     if (mouseX > bx && mouseX < bx + bw && mouseY > by && mouseY < by + bh) {
       console.log("Yes button clicked!");
-      showYesButton = false;
-      waitingForYesClick = false;
+      yesButton = false;
+      yesClicked = false;
       showFairy = true;
       if (fairySound && fairySound.isLoaded()) {
         setTimeout(() => fairySound.play(), 500);
@@ -230,15 +230,15 @@ function mousePressed() {
     return;
   }
 
-  if (waitingForInteraction) {
+  if (interaction) {
     for (let i = 0; i < objectData.length; i++) {
       if (objectCreated[i] && !objectClicked[i]) {
         let obj = objectData[i].vnObject;
         if (obj.isClicked(mouseX, mouseY)) {
           obj.activate();
           objectClicked[i] = true;
-          touchPromptCount++;
-          waitingForInteraction = false;
+          touchCount++;
+          interaction = false;
           nextSegment();
 
           if (i === 2) {
@@ -253,13 +253,13 @@ function mousePressed() {
     let currentLineText = dialogue[segment][line] || "";
 
     if (currentLineText.includes("you mean these?")) {
-      showYesButton = true;
-      waitingForYesClick = true;
+      yesButton = true;
+      yesClicked = true;
     }
 
     if (currentLineText.includes("so whats your wish")) {
-      showWishOptions = true;
-      waitingForWishClick = true;
+      showWish = true;
+      wishClicked = true;
     }
 
     if (currentLineText.includes("you will be free")) {
@@ -270,7 +270,7 @@ function mousePressed() {
     }
     if (line >= dialogue[segment].length) {
       line = 0;
-      waitingForInteraction = true;
+      interaction = true;
 
       if (
         segment < objectData.length &&
