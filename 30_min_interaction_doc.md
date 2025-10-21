@@ -13,4 +13,4 @@ I had previously coded a visual novel-ish structure in unity before so i tried t
 If i had to name inspirations for this work, im hugely inspired by vivinos and vewn's works. overall i wanted the background to look dull and the fairy to look more vibrant to create a sense of stark difference.
 
 ##### Art direction
-  this is the initial moodboard i had with me before starting the game  ![moodboard](https://64.media.tumblr.com/c78df0308232cc49b7ec72a4dca7be03/d33062fd8235bb3a-51/s540x810/c7eb97930ba831d7470bf0905b5ba58f9d452b08.png)  
+ | this is the initial moodboard i had with me before starting the game  | ![moodboard](https://64.media.tumblr.com/c78df0308232cc49b7ec72a4dca7be03/d33062fd8235bb3a-51/s540x810/c7eb97930ba831d7470bf0905b5ba58f9d452b08.png)  |
