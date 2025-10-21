@@ -25,7 +25,7 @@ If i had to name inspirations for this work, im hugely inspired by vivinos and v
 
 ## Work Process
 
-### Making the sprites
+### Making the artwork
 First i started with making the background, the sprites and the other visual elements as I already had a pretty clear idea of what i want to show and how i want to proceed with it.
 I wanted to draw everything in a very simple artstyle to contain its childlike element. First i drew the backgrounds for the **main scene** and the **ending scene**. In the main scene i drew 5 frames to animate the sea waves, put them in an array and played it in a loop using "for" throughout the whole main scene.
 ![background](https://64.media.tumblr.com/09026c95876bc005b2a50df99c3cd964/d33062fd8235bb3a-91/s2048x3072/ffc03f44c7995098476c469f0615178a3c6f84d8.png)
@@ -35,3 +35,12 @@ Then i drew the magical objects and the fairy sprites both with and without the 
 
 And at last i drew the wings sprite and gave it an animation using the same process.
 ![wings](https://64.media.tumblr.com/ab37992b2b1c844c5f20625f6b2dd7ad/3a0cb4ff6bd3a5fe-2a/s2048x3072/28745f735b321ca56c72c9fd076d395a37fc7ffb.png)
+
+### Coding
+i did the coding part in many parts, step by step. First i started with the dialogue box, then proceeded to the object-click interaction and then added a start screen and ending scene to it.
+I created a class called VNObject for the magical objects and used random() function to call them so that each time they will appear on different places and the player has to collect them by clicking on.
+![object](https://64.media.tumblr.com/7088f000aca09af42ba0077e6d84ee2e/799ef608e0a771fd-3a/s540x810/676b422725a3a885b2416a3e370e511300594ea4.png)
+
+
+I divided the whole thing into seperate segments so that after the player collects each object the story proceeds to the next segment.I also added a "button" in two places of the story to add the feel of "making choices" that you encounter in visual novels. Though since I had a time limit of 30 seconds, for now the story only has one path and one ending.
+![click](https://64.media.tumblr.com/7aa0cb0afc3fcbaa8b8b39a0aba684dc/aef0b93eaa02dd92-04/s540x810/0a7eee493d90bdbd711d3d5fe571ef816dc3617a.png)
