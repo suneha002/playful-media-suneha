@@ -23,6 +23,9 @@
 - i have a huge love for tiles. at my home we have this specific kind of tiles in the bathroom that has 6 tiles within it which are random and sometimes, when joined together they even match and create a new pattern together.
 - that was the main inspiration behind this assignment. i tried to recreate those tiles. thus i made 4 images that had 4 tiles in them each. and some of them, if placed beside each other will join and create a new pattern.
 
+- tiles asset: 
+![tiles](https://64.media.tumblr.com/3edf9015712e731f580a305fbd7b8267/5b2ddb32770cd4c7-a5/s250x400/f4d70141bb26062210ed33f7b12d740b066c4478.png)
+
 ## Day 4 assignment
 - since the asset i chose for this assigment was already as existing file there wasn't any creative thoughts behind the design of the charater. however i experimented with assigning different keys commands and next i'd like to make my own sprites and different even more different kind of actions in it.
 
@@ -39,10 +42,10 @@
 - i had previously coded a visual novel-ish structure in unity before using class to change scenes, interactions so i tried to implement similar things in p5 js as well which was a little challenging as p5 is not exactly designed for making "games" but it was enjoyable and a nice experience regardless.
 - if i had to name inspirations for this work, im hugely inspired by vivinos and vewn's works. overall i wanted the background to look dull and the fairy to look more vibrant to create a sense of stark difference.
 - however i'd like to change and modify quite a lot places (like adding music, animation to the text) to make it look more immersive and just pleasant to look at
+**(full documentation of this assignment is on the seperate file)**
 
 
-
-## Day 8 assignment
+## Day 6 assignment
 
 ##### new parts to add
 - i want to add the ending scene where the player can gain wings and fly away. preferably add controls and change the game state 
@@ -50,3 +53,7 @@
 - make the dialogue box and font look fancier
 - add animation in the text (optional)
 - add a "beep" noise everytime the player interacts with an object (optional)
+
+## Day 7-10 assignment
+
+- for the rest of the days i spent time practicing arrays, classes and objects as accordingly taught in class.
