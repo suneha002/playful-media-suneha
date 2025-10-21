@@ -36,6 +36,8 @@ Then i drew the magical objects and the fairy sprites both with and without the 
 And at last i drew the wings sprite and gave it an animation using the same process.
 ![wings](https://64.media.tumblr.com/ab37992b2b1c844c5f20625f6b2dd7ad/3a0cb4ff6bd3a5fe-2a/s2048x3072/28745f735b321ca56c72c9fd076d395a37fc7ffb.png)
 
+-------------------
+
 ### ✧ Coding
 i did the coding part in many parts, step by step. First i started with the dialogue box, then proceeded to the object-click interaction and then added a start screen and ending scene to it.
 I created a class called VNObject for the magical objects and used random() function to call them so that each time they will appear on different places and the player has to collect them by clicking on.
