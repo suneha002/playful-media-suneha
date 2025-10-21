@@ -14,4 +14,4 @@ If i had to name inspirations for this work, im hugely inspired by vivinos and v
 
 ##### Art direction
   this is the initial moodboard i had with me before starting the game. Most of these are taken from old 2000s visual novels which were infamous for talking about more heavy topics through the use of rather uncharacteriscally cute looking characters. That's what I went for when I created 'Fairy'. I wanted it to come off as cute and childish unfitting of the gloomy background. This is because the fairy is supposed to represent the player's childhood mindscape.  
-   ![moodboard](https://64.media.tumblr.com/c78df0308232cc49b7ec72a4dca7be03/d33062fd8235bb3a-51/s540x810/c7eb97930ba831d7470bf0905b5ba58f9d452b08.png)  ![screen](https://64.media.tumblr.com/49600e78fc5afb01c20754e48133d2cd/d33062fd8235bb3a-7f/s1280x1920/51226a52140b5df3254457e1bb7f1b515f2dc4f2.png) 
+ |  ![moodboard](https://64.media.tumblr.com/c78df0308232cc49b7ec72a4dca7be03/d33062fd8235bb3a-51/s540x810/c7eb97930ba831d7470bf0905b5ba58f9d452b08.png) | ![screen](https://64.media.tumblr.com/49600e78fc5afb01c20754e48133d2cd/d33062fd8235bb3a-7f/s1280x1920/51226a52140b5df3254457e1bb7f1b515f2dc4f2.png) |
