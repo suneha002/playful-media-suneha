@@ -46,3 +46,12 @@ I created a class called VNObject for the magical objects and used random() func
 
 I divided the whole thing into seperate segments so that after the player collects each object the story proceeds to the next segment.I also added a "button" in two places of the story to add the feel of "making choices" that you encounter in visual novels. Though since I had a time limit of 30 seconds, for now the story only has one path and one ending.
 ![click](https://64.media.tumblr.com/7aa0cb0afc3fcbaa8b8b39a0aba684dc/aef0b93eaa02dd92-04/s540x810/0a7eee493d90bdbd711d3d5fe571ef816dc3617a.png)
+
+Since my interaction is not fullscreen, i edited the style.css to make the whole thing appear in the center.
+
+The link to the full code can be found [here](https://github.com/suneha002/playful-media-suneha/tree/main/day5/day5%20assignment)
+
+## Moving Forward
+I'm 80% satisfied with how this turned out but I were to add some modifications then i surely have quite a few future plans.
+- First and foremost i want to add a "route diverge" feature that would be similar to any visual novels. Here if the player is someone 'who doesn't believe in fairies' he will be met with a different ending, which can be something more comedy-gag genre or more of a realistic outcome.
+- I want to modify the ending scene where the player can see the background change in his own perspective, maybe a 3D element can be introduced and if possible I'd like to take the project to a different platform to implement it properly.
