@@ -1,5 +1,5 @@
 # Project: Do you believe in fairies? // 30 seconds interaction project
-### Description & Interaction
+## Description & Interaction
 This 30 second interaction is a visual-novel inspired story where the player reads through the text and interacts with specific objects to proceed to the goal. 
 The player goes to a beach in search of freedom. A lonely beach with silent waves hitting the shore that will make anyone feel like they're the only person in the world- that's the kind of setting i wanted to give this project.
 After that the player collects items that come washing away in the sea waves and soon a strange looking fairy also appears in front of them. After the player helps the fairy get back its things, it grants them their wish to be free.
@@ -12,11 +12,11 @@ This interaction can be interpreted in many different ways. But i wanted this to
 I had previously coded a visual novel-ish structure in unity before so i tried to implement similar things in p5 js as well which was a little challenging as p5 is not exactly designed for making "games" but i wanted to see how far I could go with it
 If i had to name inspirations for this work, im hugely inspired by vivinos and vewn's works. overall i wanted the background to look dull and the fairy to look more vibrant to create a sense of stark difference.
 
-### Art direction
+### ✧ Art direction
   this is the initial moodboard i had with me before starting the game. Most of these are taken from old 2000s visual novels which were infamous for talking about more heavy topics through the use of rather uncharacteriscally cute looking characters. That's what I went for when I created 'Fairy'. I wanted it to come off as cute and childish unfitting of the gloomy background. This is because the fairy is supposed to represent the player's childhood mindscape.  
   ![moodboard](https://64.media.tumblr.com/c78df0308232cc49b7ec72a4dca7be03/d33062fd8235bb3a-51/s540x810/c7eb97930ba831d7470bf0905b5ba58f9d452b08.png) 
 
-### Design objectives
+### ✧ Design objectives
 **1. Contrasting colors:** Like mentioned before, using contrasting colors for the background and the characters was one of the first concepts i had while coming up with the interaction. The beach with gloomy colors is supposed to represent the player's dull adult life. The fairy and all the magical objects with their bright pink and purple color palette talks about the playfulness of a child's dreams.
 
 **2. Dreamy Music:** I chose "fairy of shampoo" by dosii as the background music as it just felt right for this interaction due to the whole "dreamy" vibe its musicals have. The lyrics, however, talk about a completely different topic though, which is why i decided to go with the instrumental version instead.
@@ -25,7 +25,7 @@ If i had to name inspirations for this work, im hugely inspired by vivinos and v
 
 ## Work Process
 
-### Making the artwork
+### ✧ Making the artwork
 First i started with making the background, the sprites and the other visual elements as I already had a pretty clear idea of what i want to show and how i want to proceed with it.
 I wanted to draw everything in a very simple artstyle to contain its childlike element. First i drew the backgrounds for the **main scene** and the **ending scene**. In the main scene i drew 5 frames to animate the sea waves, put them in an array and played it in a loop using "for" throughout the whole main scene.
 ![background](https://64.media.tumblr.com/09026c95876bc005b2a50df99c3cd964/d33062fd8235bb3a-91/s2048x3072/ffc03f44c7995098476c469f0615178a3c6f84d8.png)
@@ -36,7 +36,7 @@ Then i drew the magical objects and the fairy sprites both with and without the 
 And at last i drew the wings sprite and gave it an animation using the same process.
 ![wings](https://64.media.tumblr.com/ab37992b2b1c844c5f20625f6b2dd7ad/3a0cb4ff6bd3a5fe-2a/s2048x3072/28745f735b321ca56c72c9fd076d395a37fc7ffb.png)
 
-### Coding
+### ✧ Coding
 i did the coding part in many parts, step by step. First i started with the dialogue box, then proceeded to the object-click interaction and then added a start screen and ending scene to it.
 I created a class called VNObject for the magical objects and used random() function to call them so that each time they will appear on different places and the player has to collect them by clicking on.
 ![object](https://64.media.tumblr.com/7088f000aca09af42ba0077e6d84ee2e/799ef608e0a771fd-3a/s540x810/676b422725a3a885b2416a3e370e511300594ea4.png)
