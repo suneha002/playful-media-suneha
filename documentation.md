@@ -24,6 +24,7 @@
 - that was the main inspiration behind this assignment. i tried to recreate those tiles. thus i made 4 images that had 4 tiles in them each. and some of them, if placed beside each other will join and create a new pattern.
 
 - tiles asset: 
+
 ![tiles](https://64.media.tumblr.com/3edf9015712e731f580a305fbd7b8267/5b2ddb32770cd4c7-a5/s250x400/f4d70141bb26062210ed33f7b12d740b066c4478.png)
 
 ## Day 4 assignment
