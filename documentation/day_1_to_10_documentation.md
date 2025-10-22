@@ -65,7 +65,7 @@
 
 ## Day 5 assignment
 
-**(full documentation of this assignment is on the seperate file [here](https://github.com/suneha002/playful-media-suneha/blob/main/30_sec_interaction_doc.md))** 
+**(full documentation of this assignment is on the seperate file [here](https://github.com/suneha002/playful-media-suneha/blob/main/documentation/30_sec_interaction_doc.md))** 
 
 - this 30-ish second interaction was inspired from a mixture of different things i love- quiet beaches and cats and children's magical stories.
 ##### Interaction 
@@ -85,14 +85,22 @@
 
 ## Day 6 assignment
 
-##### new parts to add
+##### new parts to add to day 5 assignment 
 - i want to add the ending scene where the player can gain wings and fly away. preferably add controls and change the game state 
-- add music (already done) add a fade-out? (to be done)
+- add music (already done) 
 - make the dialogue box and font look fancier
 - add animation in the text (optional)
-- add a "beep" noise everytime the player interacts with an object (optional)
+- add a "beep" noise everytime the player interacts with an object 
 
 ## Day 7 assignment
 
--
+### Aim
+- we had to make a project using class Flower that would have draw(), sway() and grow() function. there was also instruction that only the flowers close to the mouse pointer will sway.
+
+### Work process
+
+- i used noise() function to add the sway animation in the flowers. however since it doesn't create a very smooth motion i'd like to modify it using sin() or cos() function.
+- i set the grow animation at a very slow pace to make it look pleasing to the eyes.
+
+[link to work](https://suneha002.github.io/playful-media-suneha/day7/day%207%20assignment/) || [link to code](https://github.com/suneha002/playful-media-suneha/tree/main/day7/day%207%20assignment)
 
