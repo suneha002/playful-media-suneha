@@ -1,3 +1,99 @@
+class Paddle {
+  constructor(x, y, w, h, speed,color) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.speed = speed;
+    this.color=color;
+  }
+
+  show() {
+    fill(this.color);
+    rect(this.x, this.y, this.w, this.h);
+  }
+
+  moveUp() {
+    this.y -= this.speed;
+    this.y = max(0, this.y); 
+  }
+
+  moveDown() {
+    this.y += this.speed;
+    this.y = min(height - this.h, this.y); 
+  }
+
+  moveTo(targetY) {
+    let dy = targetY - this.y;
+    this.y += dy * 0.09;
+    this.y = constrain(this.y, 0, height - this.h); 
+  }
+}
+
+class Ball {
+  constructor(x, y, vx, vy) {
+    this.x = x;
+    this.y = y;
+    this.vx = vx;
+    this.vy = vy;
+    this.r = 12;
+  }
+
+  move() {
+    this.x += this.vx;
+    this.y += this.vy;
+  }
+
+  show() {
+    fill(220);
+    ellipse(this.x, this.y, this.r * 2);
+  }
+
+  checkCollisionWall() {
+    if (this.y - this.r < 0 || this.y + this.r > height) {
+      this.vy *= -1;
+    }
+  }
+
+  checkCollisionPaddle(paddle) {
+
+    if (
+      this.x - this.r < paddle.x + paddle.w &&
+      this.x + this.r > paddle.x &&
+      this.y + this.r > paddle.y &&
+      this.y - this.r < paddle.y + paddle.h
+    ) {
+      this.vx *= -1;
+
+    
+      this.vy += random(-1, 1);
+
+
+      if (this.vx > 0) {
+        this.x = paddle.x + paddle.w + this.r;
+      } else {
+        this.x = paddle.x - this.r;
+      }
+
+      pingSound.play();
+    }
+  }
+
+  checkWinner() {
+    if (this.x < 0) return 2;
+    if (this.x > width) return 1;
+    return 0;
+  }
+
+  reset() {
+    this.x = width / 2;
+    this.y = height / 2;
+    this.vx = random([-5, 5]);
+    this.vy = random([-3, 3]);
+  }
+}
+
+
 let gBall;
 let paddle1, paddle2, paddle1Mind, paddle2Mind, player1 = 0, player2 = 0;
 
