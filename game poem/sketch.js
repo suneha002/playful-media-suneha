@@ -18,7 +18,7 @@ let eFrames = [];
 let aFrames = [];
 let kFrames = [];
 
-let numD = 13;
+let numD = 19;
 let numE = 15;
 let numA = 27;
 let numK = 26;
